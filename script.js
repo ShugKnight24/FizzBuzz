@@ -1,27 +1,18 @@
 'use strict';
 
-/* Play with FizzBuzz in the console */
-for (var i = 1; i <= 100; i++) {
-	if (i % 3 === 0 && i % 5 === 0) {
-		console.log("FizzBuzz" + '\n');
-	} else if (i % 3 === 0) {
-		console.log("Buzz" + '\n');
-	} else if(i % 5 === 0) {
-		console.log("Fizz" + '\n');
-	} else {
-		console.log(i + '\n');
+var largestNumber = 100;
+/* Print FizzBuzz in the console & in the browser */
+function fizzy(count){
+	for (var i = 1; i <= count; i++) {
+		var word = '';
+		if (i % 3 === 0){
+			word = 'Fizz';
+		}
+		if (i % 5 === 0){
+			word += 'Buzz';
+		}
+		console.log((word || i) + '\n');
+		document.write((word || i) + '<br>');
 	}
 }
-
-/* Print out FizzBuzz to the browser */
-for (var i = 1; i <= 100; i++) {
-	if (i % 3 === 0 && i % 5 === 0) {
-		document.write("FizzBuzz" + '<br/>');
-	} else if (i % 3 === 0) {
-		document.write("Fizz" + '<br/>');
-	} else if (i % 5 === 0)  {
-		document.write("Buzz" + '<br/>');
-	} else {
-		document.write(i + '<br/>');
-	}
-}
+fizzy(largestNumber);
