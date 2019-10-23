@@ -11,6 +11,9 @@ function fizzy(count){
 		if (i % 5 === 0){
 			word += 'Buzz';
 		}
+		if (i % 7 === 0){
+			word += 'Detroit';
+		}
 		console.log((word || i) + '\n');
 		document.write((word || i) + '<br>');
 	}
